@@ -14,14 +14,8 @@ st.set_page_config(
 # Load the trained ensemble model from the saved pickle file.
 modelfile = "./voting_model.pkl"
 
-@st.cache_resource
-def load_model():
-    with open(modelfile, 'rb') as f:
-        loaded_model = pickle.load(f)
-    return loaded_model
-
-voting_model = load_model()
-
+with open('voting_model.pkl', 'rb') as f:
+    loaded_model = pickle.load(f)
 # Display the title and captions for the app.
 st.title("Timelytics: Optimize your supply chain with advanced forecasting techniques.")
 
