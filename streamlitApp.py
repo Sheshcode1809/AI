@@ -16,6 +16,7 @@ modelfile = "./voting_model.pkl"
 
 with open('voting_model.pkl', 'rb') as f:
     loaded_model = pickle.load(f)
+    
 # Display the title and captions for the app.
 st.title("Timelytics: Optimize your supply chain with advanced forecasting techniques.")
 
